@@ -1,82 +1,490 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع خديجة - مهندسة ذكاء اصطناعي</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>خديجة - مهندسة ذكاء اصطناعي</title> <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</head>
 <body>
+    <div class="scroll-progress"></div>
 
-    <header>
-        <div class="container">
-            <h1>خديجة</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">من أنا</a></li>
-                    <li><a href="#projects">مشاريعي</a></li>
-                    <li><a href="#contact">تواصل معي</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#profile" onclick="showSection('profile')">الملف الشخصي</a></li>
+            <li><a href="#skills" onclick="showSection('skills')">المهارات</a></li>
+            <li><a href="#projects" onclick="showSection('projects')">المشاريع</a></li>
+            <li><a href="#experience" onclick="showSection('experience')">الخبرات</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">الاتصال</a></li>
+        </ul>
+    </nav>
 
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h2>مرحباً، أنا <br> خديجة</h2>
-                <p>طالبة هندسة ذكاء اصطناعي شغوفة بالتعلم الآلي وتطوير التطبيقات.</p>
-                <a href="#projects" class="btn">اكتشف مشاريعي</a>
+    <main class="container">
+       <section id="profile" class="section active">
+    <div class="main-profile">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-image-container">
+                    <img src="profile-img.jpg" alt="خديجة - مهندسة ذكاء اصطناعي" class="profile-img">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        متاحة للعمل
+                    </div>
+                    <div class="profile-image-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-user-circle"></i>
+                            <span>خديجة</span> </div>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <div class="name-section">
+                        <h1>خديجة</h1> <div class="typing-effect">
+                            <span class="typing-text">مهندسة ذكاء اصطناعي</span> </div>
+                    </div>
+                    <h2>طالبة هندسة ذكاء اصطناعي</h2> <div class="profile-tags">
+                        <span class="profile-tag"><i class="fas fa-brain"></i>ذكاء اصطناعي</span>
+                        <span class="profile-tag"><i class="fas fa-robot"></i>تعلم آلي</span>
+                        <span class="profile-tag"><i class="fas fa-mobile-alt"></i>تطوير تطبيقات</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image">
-                </div>
-        </div>
-    </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>من أنا؟</h2>
-            <p>أنا طالبة في كلية الهندسة، قسم الذكاء الاصطناعي. أمتلك شغفاً كبيراً في استكشاف عالم التعلم الآلي، معالجة اللغات الطبيعية، وتطوير تطبيقات Flutter الحديثة. أسعى دائماً لتطبيق المعرفة النظرية في مشاريع عملية ومبتكرة.</p>
-            <p>أؤمن بأن الذكاء الاصطناعي سيشكل مستقبل التكنولوجيا، وأطمح أن أكون جزءاً فعالاً في هذا المجال المتطور.</p>
+            <div class="contact-info">
+                <a href="tel:00964xxxxxxxxxx" class="contact-item"> <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">هاتف</span>
+                        <span class="contact-value">00964xxxxxxxxxx</span>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/your.facebook.profile" target="_blank" rel="noopener noreferrer" class="contact-item"> <div class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">فيسبوك</span>
+                        <span class="contact-value">ملفك على الفيسبوك</span>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/your.instagram.profile" target="_blank" rel="noopener noreferrer" class="contact-item"> <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">إنستغرام</span>
+                        <span class="contact-value">@اسم_المستخدم_على_الانستا</span>
+                    </div>
+                </a>
+                <a href="https://t.
+                    me/your_telegram_username" target="_blank" rel="noopener noreferrer" class="contact-item"> <div class="contact-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">تلغرام</span>
+                        <span class="contact-value">@اسم_المستخدم_على_التليغرام</span>
+                    </div>
+                </a>
+                 <a href="mailto:your.email@example.com" class="contact-item"> <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">بريد إلكتروني</span>
+                        <span class="contact-value">your.email@example.com</span>
+                    </div>
+                </a>
+            </div>
         </div>
-    </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2>مشاريعي</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                    <h3>مشروع 1: مساعد التعلم الذكي (Flutter & ML)</h3>
-                    <p>تطبيق موبايل لمساعدة الطلاب على تنظيم دراستهم، باستخدام خوارزميات التعلم الآلي لتصنيف وتلخيص الملاحظات.</p>
-                    <a href="#" class="btn-small">شاهد المشروع</a>
+        <div class="bio-section">
+            <div class="bio-card">
+                <div class="bio-header">
+                    <i class="fas fa-quote-right"></i>
+                    <h2>نبذة شخصية</h2>
                 </div>
-                <div class="project-item">
-                    <h3>مشروع 2: نظام تحليل المشاعر (Python & NLP)</h3>
-                    <p>بناء نموذج لمعالجة اللغات الطبيعية قادر على تحليل مشاعر النصوص العربية، وتحديد ما إذا كانت إيجابية، سلبية، أو محايدة.</p>
-                    <a href="#" class="btn-small">شاهد المشروع</a>
-                </div>
-                <div class="project-item">
-                    <h3>مشروع 3: تطبيق Flutter للتصوير الذكي</h3>
-                    <p>تطبيق يستخدم كاميرا الهاتف ومعالجة الصور المتقدمة للتعرف على الأشياء وتحليلها في الوقت الفعلي.</p>
-                    <a href="#" class="btn-small">شاهد المشروع</a>
-                </div>
-                </div>
-        </div>
-    </section>
+                <p class="bio-text">مرحباً، أنا خديجة، طالبة في كلية الهندسة قسم الذكاء الاصطناعي. أمتلك شغفاً كبيراً في استكشاف عالم التعلم الآلي (Machine Learning)، معالجة اللغات الطبيعية (NLP)، وتطوير التطبيقات باستخدام Flutter. أسعى دائماً لتطبيق المعرفة النظرية في مشاريع عملية ومبتكرة تساهم في تقدم هذا المجال الحيوي.</p>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>تواصل معي</h2>
-            <p>يسعدني التواصل والتعاون في مشاريع الذكاء الاصطناعي.</p>
-            <p>يمكنك التواصل معي عبر البريد الإلكتروني: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>أو زيارة ملفي الشخصي على <a href="https://github.com/khadeja8" target="_blank">GitHub</a>.</p>
+                <div class="bio-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <span class="highlight-label">المرحلة</span>
+                            <span class="highlight-value">طالبة جامعية</span>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <span class="highlight-label">الموقع</span>
+                            <span class="highlight-value">العراق</span>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <span class="highlight-label">العمر</span>
+                            <span class="highlight-value">ممكن تضعين عمرك أو تتركيه</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-counter" data-target="3">0</div> <span class="stat-label">مشاريع منجزة</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-counter" data-target="4">0</div> <span class="stat-label">شهادات تقنية</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-counter" data-target="1">0</div> <span class="stat-label">سنوات خبرة</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <h2>المهارات</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> البرمجة وتطوير التطبيقات</h3>
+            <ul>
+                <li><strong>Python:</strong> (Pandas, NumPy, Scikit-learn, TensorFlow, Keras)</li>
+                <li><strong>Flutter:</strong> (Dart, UI/UX Design, Firebase Integration)</li>
+                <li><strong>Java:</strong> (أساسيات)</li>
+                <li><strong>HTML/CSS:</strong> (بناء وتصميم واجهات الويب)</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-brain"></i> الذكاء الاصطناعي والتعلم الآلي</h3>
+            <ul>
+                <li><strong>Machine Learning:</strong> (Supervised/Unsupervised Learning, Regression, Classification)</li>
+                <li><strong>Deep Learning:</strong> (Neural Networks, CNNs, RNNs)</li>
+                <li><strong>Natural Language Processing (NLP):</strong> (Text Preprocessing, Sentiment Analysis)</li>
+                <li><strong>Computer Vision:</strong> (Image Classification, Object Detection)</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-database"></i> قواعد البيانات وأدوات أخرى</h3>
+            <ul>
+                <li><strong>SQL:</strong> (استعلامات قواعد البيانات الأساسية)</li>
+                <li><strong>Git & GitHub:</strong> (إدارة المشاريع والتحكم بالإصدارات)</li>
+                <li><strong>Jupyter Notebook:</strong> (لتحليل البيانات وتطوير نماذج ML)</li>
+            </ul>
+        </div>
+        </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>مشاريعي</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <div class="project-image-placeholder">
+                <img src="project1-img.jpg" alt="اسم المشروع 1">
+            </div>
+            <div class="project-details">
+                <h3>مشروع 1: تطبيق مساعد دراسي ذكي (Flutter & ML)</h3>
+                <p>تطبيق موبايل مصمم لمساعدة الطلاب في تنظيم موادهم الدراسية وملاحظاتهم. يستخدم خوارزميات التعلم الآلي لتصنيف المحتوى وتلخيص المعلومات، مما يوفر تجربة تعلم شخصية وفعالة.</p>
+                <div class="project-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Machine Learning</span>
+                    <span>UI/UX</span>
+                </div>
+                <a href="#" class="project-link" target="_blank">شاهد المشروع <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image-placeholder">
+                <img src="project2-img.jpg" alt="اسم المشروع 2">
+            </div>
+            <div class="project-details">
+                <h3>مشروع 2: نظام تحليل المشاعر للنصوص العربية (Python & NLP)</h3>
+                <p>نظام مبني باستخدام بايثون ومكتبات معالجة اللغات الطبيعية لتحليل النصوص العربية وتحديد ما إذا كانت تحمل طابعاً إيجابياً، سلبياً، أو محايداً. يمكن استخدامه لتحليل آراء المستخدمين.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>NLP</span>
+                    <span>Sentiment Analysis</span>
+                    <span>Machine Learning</span>
+                </div>
+                <a href="#" class="project-link" target="_blank">شاهد المشروع <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image-placeholder">
+                <img src="project3-img.jpg" alt="اسم المشروع 3">
+            </div>
+            <div class="project-details">
+                <h3>مشروع 3: التعرف على الكائنات باستخدام رؤية الحاسوب (Python & CV)</h3>
+                <div class="stat-counter" data-target="1">0</div> <span class="stat-label">سنوات خبرة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <h2>المهارات</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> البرمجة وتطوير التطبيقات</h3>
+            <ul>
+                <li><strong>Python:</strong> (Pandas, NumPy, Scikit-learn, TensorFlow, Keras)</li>
+                <li><strong>Flutter:</strong> (Dart, UI/UX Design, Firebase Integration)</li>
+                <li><strong>Java:</strong> (أساسيات)</li>
+                <li><strong>HTML/CSS:</strong> (بناء وتصميم واجهات الويب)</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-brain"></i> الذكاء الاصطناعي والتعلم الآلي</h3>
+            <ul>
+                <li><strong>Machine Learning:</strong> (Supervised/Unsupervised Learning, Regression, Classification)</li>
+                <li><strong>Deep Learning:</strong> (Neural Networks, CNNs, RNNs)</li>
+                <li><strong>Natural Language Processing (NLP):</strong> (Text Preprocessing, Sentiment Analysis)</li>
+                <li><strong>Computer Vision:</strong> (Image Classification, Object Detection)</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3><i class="fas fa-database"></i> قواعد البيانات وأدوات أخرى</h3>
+            <ul>
+                <li><strong>SQL:</strong> (استعلامات قواعد البيانات الأساسية)</li>
+                <li><strong>Git & GitHub:</strong> (إدارة المشاريع والتحكم بالإصدارات)</li>
+                <li><strong>Jupyter Notebook:</strong> (لتحليل البيانات وتطوير نماذج ML)</li>
+            </ul>
+        </div>
+        </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>مشاريعي</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <div class="project-image-placeholder">
+                <img src="project1-img.jpg" alt="اسم المشروع 1">
+            </div>
+            <div class="project-details">
+                <h3>مشروع 1: تطبيق مساعد دراسي ذكي (Flutter & ML)</h3>
+                <p>تطبيق موبايل مصمم لمساعدة الطلاب في تنظيم موادهم الدراسية وملاحظاتهم. يستخدم خوارزميات التعلم الآلي لتصنيف المحتوى وتلخيص المعلومات، مما يوفر تجربة تعلم شخصية وفعالة.</p>
+                <div class="project-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Machine Learning</span>
+                    <span>UI/UX</span>
+                </div>
+                <a href="#" class="project-link" target="_blank">شاهد المشروع <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image-placeholder">
+                <img src="project2-img.jpg" alt="اسم المشروع 2">
+            </div>
+            <div class="project-details">
+                <h3>مشروع 2: نظام تحليل المشاعر للنصوص العربية (Python & NLP)</h3>
+                <p>نظام مبني باستخدام بايثون ومكتبات معالجة اللغات الطبيعية لتحليل النصوص العربية وتحديد ما إذا كانت تحمل طابعاً إيجابياً، سلبياً، أو محايداً. يمكن استخدامه لتحليل آراء المستخدمين.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>NLP</span>
+                    <span>Sentiment Analysis</span>
+                    <span>Machine Learning</span>
+                </div>
+                <a href="#" class="project-link" target="_blank">شاهد المشروع <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image-placeholder">
+                <img src="project3-img.jpg" alt="اسم المشروع 3">
+            </div>
+            <div class="project-details">
+                <h3>مشروع 3: التعرف على الكائنات باستخدام رؤية الحاسوب (Python & CV)</h3>
+                <p>مشروع يهدف إلى بناء نموذج قادر على التعرف على كائنات مختلفة داخل الصور أو مقاطع الفيديو باستخدام تقنيات رؤية الحاسوب، مع إمكانية تحديد مواقعها بدقة.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Computer Vision</span>
+                    <span>Deep Learning</span>
+                    <span>Object Detection</span>
+                </div>
+                <a href="#" class="project-link" target="_blank">شاهد المشروع <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+        </div>
+</section>
+
+<section id="experience" class="section">
+    <h2>الخبرات</h2>
+    <div class="experience-container">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>تدريب عملي - شركة (اسم الشركة)</h3>
+                    <p class="timeline-period">أكتوبر 2023 - ديسمبر 2023</p>
+                    <ul>
+                        <li>تطبيق نماذج تعلم آلي على بيانات حقيقية لتحسين أداء الأنظمة.</li>
+                        <li>المساهمة في تطوير واجهات مستخدم تفاعلية باستخدام Flutter.</li>
+                        <li>التعاون مع فريق العمل في تحليل وتصميم حلول الذكاء الاصطناعي.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>مشروع تخرج - جامعة (اسم الجامعة)</h3>
+                    <p class="timeline-period">يناير 2024 - مايو 2024</p>
+                    <ul>
+                        <li>تصميم وتطوير نظام ذكاء اصطناعي (اذكري تفاصيل مشروع تخرجك).</li>
+                        <li>إجراء البحوث وتحليل البيانات لتحقيق أهداف المشروع.</li>
+                        <li>عرض النتائج والتحديات أمام لجنة التحكيم.</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>تواصل معي</h2>
+    <p>يسعدني التواصل والتعاون في مشاريع الذكاء الاصطناعي وتطوير التطبيقات. لا تتردد في مراسلتي!</p>
+    <div class="contact-methods">
+        <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <p>البريد الإلكتروني</p>
+            <a href="mailto:your.email@example.com">your.email@example.com</a> </div>
+        <div class="contact-card">
+            <i class="fab fa-linkedin"></i>
+            <p>LinkedIn</p>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a> </div>
+        <div class="contact-card">
+            <i class="fab fa-github"></i>
+            <p>GitHub</p>
+            <a href="https://github.com/khadeja8" target="_blank">github.com/khadeja8</a> </div>
+    </div>
+</section>
+
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 خديجة. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
+        <p>&copy; 2025 خديجة. جميع الحقوق محفوظة.</p> </footer>
 
+    <script src="script.js"></script>
+    <script>
+        // هذا الكود الخاص بتأثير الكتابة (typing effect)
+        const typingTextElement = document.querySelector('.typing-text');
+        const phrases = ["مهندسة ذكاء اصطناعي", "مطور تطبيقات Flutter", "باحثة في التعلم الآلي"]; // ممكن تعديل العبارات
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 150;
+        let deletingSpeed = 100;
+        let pauseTime = 1500;
+
+        function typeEffect() {
+            const currentPhrase = phrases[phraseIndex];
+            const currentChar = currentPhrase.substring(0, charIndex);
+            typingTextElement.textContent = currentChar;
+
+            if (!isDeleting && charIndex < currentPhrase.length) {
+                charIndex++;
+                setTimeout(typeEffect, typingSpeed);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(typeEffect, deletingSpeed);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+                setTimeout(typeEffect, pauseTime);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', typeEffect); // بدء التأثير عند تحميل الصفحة
+
+        // هذا الكود الخاص بفتح واغلاق القائمة (Navigation Menu) في الشاشات الصغيرة
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // هذا الكود الخاص بإظهار الأقسام عند الضغط على روابط القائمة
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+
+            // إغلاق القائمة بعد اختيار قسم (في الموبايل)
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        }
+
+        // كود شريط التقدم (Scroll Progress Bar)
+        const scrollProgress = document.querySelector('.scroll-progress');
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        });
+
+
+        // كود عدادات الإحصائيات (Stat Counters)
+        const statCounters = document.querySelectorAll('.stat-counter');
+
+        statCounters.forEach(counter => {
+            const target = +counter.dataset.target;
+            const speed = 200; // السرعة بالمللي ثانية
+
+            const updateCount = () => {
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            // فقط ابدأ العد عندما يكون العنصر مرئيا
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCount();
+                        observer.unobserve(entry.target); // توقف عن المراقبة بعد بدء العد
+                    }
+                });
+            }, { threshold: 0.5 }); // ابدأ العد عندما يكون 50% من العنصر مرئيا
+            observer.observe(counter);
+        });
+    </script>
 </body>
 </html>
