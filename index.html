@@ -3,56 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع [اسمك] الشخصي</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            direction: rtl;
-            text-align: right;
-            margin: 50px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #0056b3;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .projects {
-            margin-top: 30px;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
-        }
-        .project-item {
-            margin-bottom: 15px;
-        }
-        .project-item a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .project-item a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
+    <title>موقع خديجة - مهندسة ذكاء اصطناعي</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
-    <h1>أهلاً بك في موقع [اسمك] الشخصي!</h1>
-    <p>أنا طالبة هندسة ذكاء اصطناعي مهتمة بـ [اذكر اهتماماتك، مثل: التعلم الآلي، معالجة اللغات الطبيعية، تطوير التطبيقات باستخدام فلاتر].</p>
-    <p>هنا ستجد بعض أعمالي ومشاريعي.</p>
 
-    <div class="projects">
-        <h2>مشاريعي</h2>
-        <div class="project-item">
-            <h3><a href="#">مشروع 1: [اسم مشروعك هنا]</a></h3>
-            <p>وصف مختصر للمشروع الأول الذي عملت عليه (مثلاً: تطبيق Flutter لتصنيف الصور).</p>
+    <header>
+        <div class="container">
+            <h1>خديجة</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">من أنا</a></li>
+                    <li><a href="#projects">مشاريعي</a></li>
+                    <li><a href="#contact">تواصل معي</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="project-item">
-            <h3><a href="#">مشروع 2: [اسم مشروعك هنا]</a></h3>
-            <p>وصف مختصر للمشروع الثاني (مثلاً: نموذج تعلم آلة لتوقع...).</p>
-        </div>
-        </div>
+    </header>
 
-    <p>للتواصل، يرجى إرسال بريد إلكتروني إلى: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>مرحباً، أنا <br> خديجة</h2>
+                <p>طالبة هندسة ذكاء اصطناعي شغوفة بالتعلم الآلي وتطوير التطبيقات.</p>
+                <a href="#projects" class="btn">اكتشف مشاريعي</a>
+            </div>
+            <div class="hero-image">
+                </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>من أنا؟</h2>
+            <p>أنا طالبة في كلية الهندسة، قسم الذكاء الاصطناعي. أمتلك شغفاً كبيراً في استكشاف عالم التعلم الآلي، معالجة اللغات الطبيعية، وتطوير تطبيقات Flutter الحديثة. أسعى دائماً لتطبيق المعرفة النظرية في مشاريع عملية ومبتكرة.</p>
+            <p>أؤمن بأن الذكاء الاصطناعي سيشكل مستقبل التكنولوجيا، وأطمح أن أكون جزءاً فعالاً في هذا المجال المتطور.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>مشاريعي</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>مشروع 1: مساعد التعلم الذكي (Flutter & ML)</h3>
+                    <p>تطبيق موبايل لمساعدة الطلاب على تنظيم دراستهم، باستخدام خوارزميات التعلم الآلي لتصنيف وتلخيص الملاحظات.</p>
+                    <a href="#" class="btn-small">شاهد المشروع</a>
+                </div>
+                <div class="project-item">
+                    <h3>مشروع 2: نظام تحليل المشاعر (Python & NLP)</h3>
+                    <p>بناء نموذج لمعالجة اللغات الطبيعية قادر على تحليل مشاعر النصوص العربية، وتحديد ما إذا كانت إيجابية، سلبية، أو محايدة.</p>
+                    <a href="#" class="btn-small">شاهد المشروع</a>
+                </div>
+                <div class="project-item">
+                    <h3>مشروع 3: تطبيق Flutter للتصوير الذكي</h3>
+                    <p>تطبيق يستخدم كاميرا الهاتف ومعالجة الصور المتقدمة للتعرف على الأشياء وتحليلها في الوقت الفعلي.</p>
+                    <a href="#" class="btn-small">شاهد المشروع</a>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>تواصل معي</h2>
+            <p>يسعدني التواصل والتعاون في مشاريع الذكاء الاصطناعي.</p>
+            <p>يمكنك التواصل معي عبر البريد الإلكتروني: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>أو زيارة ملفي الشخصي على <a href="https://github.com/khadeja8" target="_blank">GitHub</a>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 خديجة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
