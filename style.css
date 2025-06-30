@@ -194,7 +194,6 @@ nav .nav-links li a:hover {
     right: 5px;
     background-color: #28a745; /* أخضر */
     color: #fff;
-    padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
     display: flex;
@@ -869,7 +868,7 @@ footer {
     }
     .timeline-dot {
         left: 10px; /* نقل النقطة لليسار */
-        right: auto; /* إلغاء اليمين */
+        right: auto;
     }
     .timeline-item:nth-child(odd) .timeline-dot {
         left: 10px;
@@ -918,3 +917,5 @@ footer {
         font-size: 2.5rem;
     }
 }
+    padding: 5px 10px;
+    
