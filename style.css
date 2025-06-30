@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl; /* للغة العربية */
+    text-align: right; /* محاذاة النص لليمين */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* لون خلفية خفيف */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* أزرق داكن */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 5px solid #3498db; /* خط أزرق أسفل الهيدر */
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2.5rem;
+}
+
+header nav {
+    float: left; /* للمحاذاة لليسار بما أن الاتجاه RTL */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #3498db; /* لون أزرق عند التحويم */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #3498db; /* أزرق فاتح */
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    display: flex; /* لترتيب المحتوى والصورة */
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; /* ارتفاع أدنى */
+}
+
+.hero-content {
+    flex: 2;
+    padding-left: 30px; /* مسافة بين المحتوى والصورة */
+    text-align: right;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 80%;
+    border-radius: 50%; /* لجعل الصورة دائرية */
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e74c3c; /* أحمر */
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #c0392b; /* أحمر أغمق */
+}
+
+/* Sections General Styling */
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+section:nth-child(odd) { /* خلفية فاتحة للأقسام الفردية */
+    background-color: #fcfcfc;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    position: relative;
+}
+
+section h2::after { /* خط تحت العنوان */
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify; /* محاذاة للجانبين */
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 أعمدة في الشاشات الكبيرة */
+    gap: 30px; /* المسافة بين المشاريع */
+}
+
+.project-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: right;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* حركة خفيفة عند التحويم */
+}
+
+.project-item h3 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: #2ecc71; /* أخضر */
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #27ae60; /* أخضر أغمق */
+}
+
+/* Contact Section */
+.contact-section a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero-section {
+        flex-direction: column; /* ترتيب العناصر بشكل عمودي في الشاشات الصغيرة */
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        order: -1; /* لجعل الصورة في الأعلى */
+        margin-bottom: 2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة */
+    }
+}
