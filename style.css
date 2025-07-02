@@ -1,7 +1,7 @@
 /* الخطوط والألوان */
 body {
   font-family: 'Cairo', 'Tajawal', sans-serif;
-  background-color: #fff0f4;
+  background-color: #ffffff; /* خلفية أبيض */
   color: #333;
   margin: 0;
   padding: 20px 10px;
@@ -32,7 +32,7 @@ h1 {
   color: #d6336c;
   font-weight: 900;
   margin-bottom: 10px;
-  font-size: 2.8rem;
+  font-size: 2rem; /* تصغير الخط حسب طلبك */
   letter-spacing: 1.2px;
 }
 
