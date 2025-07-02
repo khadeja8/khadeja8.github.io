@@ -10,11 +10,11 @@
 </head>
 <body>
 
-  <!-- خلفية نجوم خفيفة -->
   <div class="stars-background"></div>
-
-  <!-- زر الرجوع لأعلى -->
   <button onclick="scrollToTop()" id="scrollBtn" title="رجوع للأعلى">⬆</button>
+
+  <!-- زر تغيير اللغة -->
+  <button id="langToggleBtn">English</button>
 
   <div class="container">
 
@@ -24,7 +24,7 @@
       <p>العراق 🇮🇶 | ١٩ سنة</p>
     </header>
 
-    <section class="about animate-on-scroll">
+    <section class="about animate-on-scroll" id="about">
       <h2>عني</h2>
       <p>
         أنا خديجة جواد، طالبة في كلية تكنولوجيا المعلومات ضمن تخصص هندسة الذكاء الاصطناعي – المرحلة الجامعية الثالثة.  
@@ -50,6 +50,15 @@
       </ul>
     </section>
 
+    <!-- 🔥 قسم الإنجازات -->
+    <section class="progress animate-on-scroll">
+      <h2>نسبة إتقاني الحالية</h2>
+      <div class="bar"><span style="width: 20%">ML – 20%</span></div>
+      <div class="bar"><span style="width: 40%">Python – 40%</span></div>
+      <div class="bar"><span style="width: 30%">Flutter – 30%</span></div>
+      <div class="bar"><span style="width: 60%">HTML/CSS – 60%</span></div>
+    </section>
+
     <section class="projects animate-on-scroll">
       <h2>المشاريع</h2>
       <ul>
@@ -61,7 +70,8 @@
       <h2>أشياء عني</h2>
       <ul>
         <li>عضوة في الكشافة – أشارك في الفعاليات الشبابية والتنموية.</li>
-        <li>عضوة في فريق AXIQ</li>
+        <li>أحب التعلم الذاتي والاستكشاف داخل مجال الذكاء الاصطناعي.</li>
+        <li>أسعى لخلق أثر حقيقي من خلال مشاريعي البرمجية.</li>
       </ul>
     </section>
 
@@ -69,7 +79,21 @@
       <h2>تواصل معي</h2>
       <p>📧 الإيميل: khadeja@example.com</p>
       <p>🔗 GitHub: github.com/khadeja</p>
+      <p>📸 Instagram: <a href="https://instagram.com/8hix8" target="_blank">@8hix8</a></p>
+
+      <!-- نموذج التواصل -->
+      <form action="mailto:khadeja@example.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="اسمك" required />
+        <input type="email" name="email" placeholder="بريدك الإلكتروني" required />
+        <textarea name="message" placeholder="رسالتك" required></textarea>
+        <button type="submit">أرسل</button>
+      </form>
     </section>
+
+    <!-- زر تحميل الـ CV -->
+    <div class="download animate-on-scroll">
+      <a href="khadeja-cv.pdf" download>📄 تحميل السيرة الذاتية PDF</a>
+    </div>
 
   </div>
 
