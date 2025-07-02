@@ -14,7 +14,7 @@ function revealOnScroll() {
 function animateProgressBars() {
   const bars = document.querySelectorAll('.bar span');
   bars.forEach(bar => {
-    const targetWidth = bar.getAttribute('data-progress');
+    const targetWidth = parseInt(bar.getAttribute('data-progress'));
     let width = 0;
     const interval = setInterval(() => {
       if (width >= targetWidth) {
