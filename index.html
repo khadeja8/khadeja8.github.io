@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>khadeja jawad | خديجة جواد</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- خطوط جوجل -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
 
-  <div class="stars-background"></div>
-  <button onclick="scrollToTop()" id="scrollBtn" title="رجوع للأعلى">⬆️</button>
-
-  <!-- زر تغيير اللغة -->
-  <button id="langToggleBtn">English</button>
-
   <div class="container">
 
     <header class="animate-on-scroll">
+      <img src="khad.png" alt="Khadeja Photo" class="profile-img" />
       <h1 class="typing-text">khadeja jawad | خديجة جواد</h1>
-      <p>العراق 🇮🇶 | ١٩ سنة</p>
+      <p class="location-age">العراق 🇮🇶 | ١٩ سنة</p>
     </header>
 
     <section class="about animate-on-scroll" id="about">
@@ -49,13 +47,12 @@
       </ul>
     </section>
 
-    <!-- 🔥 قسم الإنجازات -->
     <section class="progress animate-on-scroll">
       <h2>نسبة إتقاني الحالية</h2>
-      <div class="bar"><span style="width: 20%">ML – 20%</span></div>
-      <div class="bar"><span style="width: 40%">Python – 40%</span></div>
-      <div class="bar"><span style="width: 30%">Flutter – 30%</span></div>
-      <div class="bar"><span style="width: 60%">HTML/CSS – 60%</span></div>
+      <div class="bar"><span data-progress="20">ML – 0%</span></div>
+      <div class="bar"><span data-progress="40">Python – 0%</span></div>
+      <div class="bar"><span data-progress="30">Flutter – 0%</span></div>
+      <div class="bar"><span data-progress="60">HTML/CSS – 0%</span></div>
     </section>
 
     <section class="projects animate-on-scroll">
@@ -76,12 +73,10 @@
 
     <section class="contact animate-on-scroll">
       <h2>تواصل معي</h2>
-      <p>📧 الإيميل: khadeja@example.com</p>
-      <p>🔗 GitHub: github.com/khadeja</p>
+      <p>📧 الإيميل: <a href="mailto:khadejaalkhagany@gmail.com">khadejaalkhagany@gmail.com</a></p>
       <p>📸 Instagram: <a href="https://instagram.com/8hix8" target="_blank">@8hix8</a></p>
 
-      <!-- نموذج التواصل -->
-      <form action="mailto:khadeja@example.com" method="POST" enctype="text/plain">
+      <form id="contactForm">
         <input type="text" name="name" placeholder="اسمك" required />
         <input type="email" name="email" placeholder="بريدك الإلكتروني" required />
         <textarea name="message" placeholder="رسالتك" required></textarea>
