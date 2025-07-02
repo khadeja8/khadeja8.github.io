@@ -1,3 +1,18 @@
+// تأثير كتابة الاسم (Typing Effect)
+function typeEffect(element, speed = 150) {
+  const text = element.textContent;
+  element.textContent = '';
+  let i = 0;
+  const timer = setInterval(() => {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+    } else {
+      clearInterval(timer);
+    }
+  }, speed);
+}
+
 // دالة لإظهار العناصر بالتدريج عند النزول على الصفحة
 function revealOnScroll() {
   const elements = document.querySelectorAll('.animate-on-scroll');
@@ -28,12 +43,19 @@ function animateProgressBars() {
   });
 }
 
-// تشغيل الحركات عند تحميل الصفحة وعند النزول فيها
-window.addEventListener('scroll', revealOnScroll);
+// بدء الحركات عند تحميل الصفحة
 window.addEventListener('load', () => {
+  // تأثير كتابة الاسم
+  const typingElement = document.querySelector('.typing-text');
+  typeEffect(typingElement, 120);
+
+  // باقي الحركات
   revealOnScroll();
   animateProgressBars();
 });
+
+// تشغيل تأثير الظهور عند النزول
+window.addEventListener('scroll', revealOnScroll);
 
 // نموذج التواصل - لمنع إعادة تحميل الصفحة عند الإرسال (اختياري)
 const contactForm = document.getElementById('contactForm');
