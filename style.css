@@ -1,69 +1,165 @@
+/* الخطوط والألوان */
 body {
   font-family: 'Cairo', 'Tajawal', sans-serif;
-  background: #fefefe;
+  background-color: #fff0f4;
   color: #333;
   margin: 0;
-  padding: 20px;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-}
-
-h1, h2 {
-  color: #d6336c;
+  padding: 20px 10px;
+  line-height: 1.7;
+  direction: rtl;
   text-align: center;
 }
 
+.container {
+  max-width: 850px;
+  margin: auto;
+}
+
+/* الصورة */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff5c8d;
+  margin-bottom: 15px;
+}
+
+/* العنوان */
+h1 {
+  color: #d6336c;
+  font-weight: 900;
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+/* نص العراق والعمر */
+.location-age {
+  font-size: 1.1rem;
+  color: #b33951;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* العناوين الفرعية */
+h2 {
+  color: #e84393;
+  margin-bottom: 15px;
+  font-weight: 700;
+  border-bottom: 3px solid #ff6f91;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* القوائم */
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  margin: 0 auto 25px auto;
+  max-width: 400px;
+  text-align: right;
 }
 
 ul li {
-  background: #ffe4e6;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #ffe4e6;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgb(246 161 190 / 0.4);
+  transition: transform 0.3s ease;
+}
+
+ul li:hover {
+  transform: translateX(10px);
+}
+
+/* قسم النسب */
+.progress {
+  max-width: 400px;
+  margin: 25px auto 40px auto;
+  text-align: right;
 }
 
 .bar {
-  background: #eee;
+  background-color: #f7d1db;
   border-radius: 20px;
   margin: 15px 0;
   overflow: hidden;
+  box-shadow: inset 0 2px 6px rgba(255, 92, 141, 0.6);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.bar:hover {
+  box-shadow: inset 0 2px 12px rgba(255, 92, 141, 0.9);
 }
 
 .bar span {
   display: block;
-  height: 25px;
-  background-color: #d6336c;
-  text-align: right;
-  padding-right: 10px;
-  line-height: 25px;
+  height: 28px;
+  background-color: #ff5c8d;
+  width: 0;
   color: white;
+  line-height: 28px;
+  padding-right: 15px;
+  font-weight: 700;
   border-radius: 20px 0 0 20px;
+  transition: width 2s ease-in-out;
+  user-select: none;
+}
+
+/* نموذج التواصل */
+form {
+  max-width: 450px;
+  margin: 0 auto 40px auto;
+  text-align: center;
 }
 
 form input,
 form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 1px solid #e3b4c0;
+  font-size: 1.1rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
   resize: vertical;
-  font-size: 1rem;
+  box-shadow: 0 3px 6px rgb(246 161 190 / 0.3);
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #ff5c8d;
+  outline: none;
 }
 
 form button[type="submit"] {
-  background-color: #d6336c;
+  background-color: #ff5c8d;
   border: none;
   color: white;
-  padding: 12px;
-  font-size: 1.1rem;
-  border-radius: 5px;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  border-radius: 12px;
   cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgb(255 92 141 / 0.6);
+  transition: background-color 0.3s ease;
 }
+
+form button[type="submit"]:hover {
+  background-color: #d6336c;
+}
+
+/* حركات ظهور تدريجي */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform
