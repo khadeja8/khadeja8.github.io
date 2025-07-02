@@ -1,4 +1,4 @@
-// Scroll animation
+// scroll animation
 const animatedElements = document.querySelectorAll(".animate-on-scroll");
 
 function checkScroll() {
@@ -12,7 +12,7 @@ function checkScroll() {
 window.addEventListener("scroll", checkScroll);
 window.addEventListener("load", checkScroll);
 
-// زر الرجوع لأعلى
+// scroll to top
 const scrollBtn = document.getElementById("scrollBtn");
 
 window.onscroll = function () {
@@ -26,3 +26,8 @@ window.onscroll = function () {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// toggle language (fake – just example)
+document.getElementById("langToggleBtn").addEventListener("click", function () {
+  alert("🚧 ميزة تغيير اللغة تحت التطوير، ترقبيها قريبًا!");
+});
