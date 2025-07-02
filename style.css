@@ -30,9 +30,9 @@ body {
 /* العنوان الرئيسي */
 h1 {
   color: #d6336c;
-  font-weight: 900;
+  font-weight: 700;
   margin-bottom: 10px;
-  font-size: 2rem; /* تصغير الخط حسب طلبك */
+  font-size: 1.6rem; /* صغر الخط */
   letter-spacing: 1.2px;
 }
 
@@ -129,48 +129,26 @@ ul li i {
 }
 
 /* نموذج التواصل */
-form {
-  max-width: 480px;
-  margin: 0 auto 50px auto;
-  text-align: center;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 14px 0;
-  border-radius: 12px;
-  border: 1px solid #e3b4c0;
-  font-size: 1.15rem;
-  font-family: 'Cairo', 'Tajawal', sans-serif;
-  resize: vertical;
-  box-shadow: 0 4px 9px rgb(246 161 190 / 0.3);
-  transition: border-color 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-  border-color: #ff5c8d;
-  outline: none;
-}
-
-form button[type="submit"] {
-  background-color: #ff5c8d;
-  border: none;
-  color: white;
-  padding: 18px 45px;
-  font-size: 1.3rem;
-  border-radius: 16px;
-  cursor: pointer;
-  font-weight: 800;
-  box-shadow: 0 6px 12px rgb(255 92 141 / 0.65);
-  transition: background-color 0.3s ease;
+.social-icons a {
+  font-size: 2.8rem;
+  color: #d6336c;
+  transition: color 0.3s ease;
   user-select: none;
 }
 
-form button[type="submit"]:hover {
-  background-color: #d6336c;
+.social-icons a.email-icon:hover {
+  color: #9d2142;
+}
+
+.social-icons a.instagram-icon:hover {
+  color: #e4405f;
 }
 
 /* تأثيرات الظهور */
