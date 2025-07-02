@@ -1,33 +1,28 @@
-// scroll animation
-const animatedElements = document.querySelectorAll(".animate-on-scroll");
-
-function checkScroll() {
-  animatedElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top <= window.innerHeight - 100) {
-      el.classList.add("animated");
-    }
-  });
-}
-window.addEventListener("scroll", checkScroll);
-window.addEventListener("load", checkScroll);
-
-// scroll to top
-const scrollBtn = document.getElementById("scrollBtn");
-
-window.onscroll = function () {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-};
-
+// زر رجوع للأعلى
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// toggle language (fake – just example)
-document.getElementById("langToggleBtn").addEventListener("click", function () {
-  alert("🚧 ميزة تغيير اللغة تحت التطوير، ترقبيها قريبًا!");
+// تأخير تحميل الصفحة - تحريك أشرطة التقدم تدريجياً
+window.addEventListener('DOMContentLoaded', () => {
+  const bars = document.querySelectorAll('.bar span');
+  bars.forEach(bar => {
+    const width = bar.style.width;
+    bar.style.width = '0';
+    setTimeout(() => {
+      bar.style.width = width;
+    }, 500);
+  });
+});
+
+// زر تغيير اللغة (كمثال - ممكن توسعينه)
+const langToggleBtn = document.getElementById('langToggleBtn');
+langToggleBtn.addEventListener('click', () => {
+  if (langToggleBtn.textContent === 'English') {
+    langToggleBtn.textContent = 'العربية';
+    // هنا ممكن تضيفي تغيير نصوص الموقع للإنجليزية
+  } else {
+    langToggleBtn.textContent = 'English';
+    // وهنا ترجعي النصوص للعربية
+  }
 });
